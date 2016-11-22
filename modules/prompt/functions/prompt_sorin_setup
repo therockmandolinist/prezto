@@ -62,6 +62,10 @@ function prompt_sorin_git_info {
   fi
 }
 
+function prompt_sorin_virtualenv_info {
+    [[ $VIRTUAL_ENV ]] && echo "($(basename $VIRTUAL_ENV))"
+}
+
 function prompt_sorin_precmd_async {
   # Get Git repository information.
   if (( $+functions[git-info] )); then
