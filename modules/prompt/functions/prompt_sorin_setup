@@ -63,7 +63,7 @@ function prompt_sorin_git_info {
 }
 
 function prompt_sorin_virtualenv_info {
-    [[ $VIRTUAL_ENV ]] && echo "($(basename $VIRTUAL_ENV))"
+    [[ -n $VIRTUAL_ENV ]] && echo "($(basename $VIRTUAL_ENV))"
 }
 
 function prompt_sorin_precmd_async {
